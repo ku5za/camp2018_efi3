@@ -1,0 +1,251 @@
+//Vendors
+//@import 'vendors/foundation';
+
+// Common
+@import 'common/base';
+//@import 'common/fonts';
+//@import 'common/icons';
+//@import 'common/mixins';
+//@import 'common/misc';
+//@import 'common/typography';
+//@import 'common/buttons';
+//@import 'common/form-elements';
+//@import 'common/list';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* colors */
+$denim: #3b6174;
+$topaz: #13bdd2;
+$lipstick: #e21a61;
+$dark-lime-green: #80c801;
+$silver: #dbdede;
+$white: #fff;
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Text styles */
+
+.Text-Style-5 {
+    font-family: "Roboto Light";
+    font-size: 40px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: condensed;
+    line-height: 1.45;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.Text-Style-4 {
+    font-family: "Roboto Light";
+    font-size: 100px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: condensed;
+    line-height: 0.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+.Text-Style-3 {
+    font-family: "Roboto Light";
+    font-size: 50px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: condensed;
+    line-height: 0.8;
+    letter-spacing: -1.3px;
+    text-align: left;
+    color: #ffffff;
+}
+.Text-Style-2 {
+    font-family: "Roboto Light";
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: condensed;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.Text-Style {
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: condensed;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+main {
+    background: url('../img/bg_login_smooth.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+}
+
+// Grid elements
+
+#efi3-logo-container {
+    padding: 0;
+    text-align: right;
+}
+
+#efi3-logo {
+    width: 160px;
+    height: 160px;
+    border: 1px solid RGBA(255, 255, 255, 0.3);
+    border-radius: 5px;
+    display: inline-block;
+    margin: 15vh 0;
+    background: url('../img/efi3_logo.png');
+}
+
+#login-box {
+    text-align: center;
+    background: $topaz;
+    height: 80vh;
+    max-height: 600px;
+    min-height: 500px;
+    border-radius: 5px;
+    max-width: 575px;
+    width: 100%;
+    min-width: 300px;
+    display: inline-block;
+    margin: 15vh auto 0 auto;
+    padding: 0 10px;
+
+    p {
+        font-family: "Roboto Light";
+        margin: 0 0 100px 0;
+        display: inline-block;
+    }
+    #login-text {
+        text-align: center;
+        margin: 30px 0 0 0;
+    }
+
+    form{
+        
+        #login-exclamation {
+            font-size: 12px;
+            color: $silver;
+            display: none;
+            transition: all 0.5s;
+        }
+
+        #chosen-login-container {
+
+            span {
+                display: inline;
+            }
+            #chosen-login {
+                display: none;
+                color: $white;
+                font-size: 16px;
+                transition: all 0.1s;
+                margin-bottom: 5px;
+            }
+            // #delete-chosen-login {
+            //     width: 14px;
+            //     height: 14px;
+            //     border-radius: 50%;
+            //     font-size: 8px;
+            //     color: white;
+            //     background-color: RGBA(255, 255, 255, 0.3);
+            //     display: inline-block;
+            // }
+        }
+        
+
+        #login, #password {
+            width: 100%;
+            height: 35px;
+            margin: 0 0 2px 0;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: black;
+            transition: all 0.1s;
+        }
+
+        #password {
+            display: none;
+        }
+
+        #submit, #reset {
+            margin-top: 5%;
+            text-transform: uppercase;
+        }
+
+        #submit {
+            cursor: pointer;
+            padding: 10px 50px;
+            background: $white;
+            border: none;
+            border-radius: 5px;
+            font: 16px "Roboto";
+        }
+        #reset {
+            font: 16px "Roboto Light";
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: $white;
+        }
+
+        fieldset {
+            border: 1px solid RGBA(255, 255, 255, 0.3);
+            border-radius: 5px;
+            margin: 100px 20px 10% 20px;
+            padding: 20px;
+
+            #avatar-container {
+                background-color: white;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                z-index: 10;
+                margin: -70px auto 8% auto;
+            }
+        }
+    }
+}
+
+#login-links {
+    margin: 5px 0 0 0;
+    a {
+        text-align: left;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        margin: 10px 5px 0 0;
+        font-weight: 300;
+    }
+}
+
+
+@media screen and (max-width: 575px){
+    #efi3-logo-container {
+        text-align: center;
+    }
+    #efi3-logo {
+        margin: 10px 0 0 0;
+    }
+    #login-box {
+        margin: 10px 0 0 0;
+    }
+}
