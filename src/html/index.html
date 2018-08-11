@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="img/efi3_icon.png" />
 
 </head>
 <body>
@@ -25,16 +26,19 @@
                         <form method="post" action="#" autocomplete="off">
                             <fieldset>
                                 <div id="avatar-container"></div>
-                                <input type="number" name="login" id="login" class="Text-Style-2" placeholder="Wprowadź login" title="Twój login powinien zawierać 9 cyfr.">
-                                    <br />
-                                    <div id="chosen-login-container">
-                                        <span id="chosen-login"></span>
-                                        <!-- <span id="delete-chosen-login">X</span> -->
-                                    </div>
-                                    <span id="login-exclamation" class="login-info">Pole login może zawierać tylko liczby!</span>
+                                <input type="text" name="login" id="login" autofocus maxlength="9" class="Text-Style-2" placeholder="Wprowadź login" title="Twój login powinien zawierać 9 cyfr.">
+
+                                <span id="chosen-login"></span>
+                                <div id="clear-login">
+                                    <span>
+                                        &#215;
+                                    </span>
+                                </div>
+                                <span id="login-exclamation" class="login-info">Pole login może zawierać tylko cyfry</span>
+                                
                                 <input type="password" name="password" id="password" class="Text-Style-2" placeholder="Wprowadź hasło">
                                     <br />
-                                <button id="reset">Select other</button>
+                                <span id="reset">Select other</span>
                                 <input type="submit" id="submit" disabled value="Go">
                             </fieldset>
                         </form>
