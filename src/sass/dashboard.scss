@@ -22,15 +22,33 @@ nav {
     background-color: $topaz;
     height: 16vh;
 
-    .col-sm-3 {
+    #user-data {
         padding-top: 2vh;
+        width: 25vh;
+
         #efi3-logo {
+            border: 1px solid RGBA(255, 255, 255, 0.3);
+            background: url('../img/efi3_logo.png') no-repeat;
+        }
+        #user-avatar {
+            background: white;
+        }
+        #efi3-logo, #user-avatar {
             width: 12vh;
             height: 12vh;
-            border: 1px solid RGBA(255, 255, 255, 0.3);
             border-radius: 5px;
-            background: url('../img/efi3_logo.png') no-repeat;
             background-size: cover;
+            display: inline-block;
+        }
+
+        h1 {
+            font-family: "Roboto Condensed";
+            font-weight: 300;
+            display: inline-block;
+            font-size: 1.4em;
+            vertical-align: top;
+            margin: 5px 0 0 1em;
+            color: white;
         }
     }
 }

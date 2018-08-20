@@ -13,38 +13,59 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div id="efi3-logo-container" class="col-sm-4">
-                    <div id="efi3-logo"></div>
+                <div class="efi3-logo-container col-sm-4">
+                    <div class="efi3-logo">
+                        <img src="/img/efi3_logo.png" alt="Logo aplikacji efi3">
+                    </div>
                 </div>
                 <!-- Login container -->
                 <div class="col-sm-4">
-                    <div id="login-box">
+                    <div class="login-box">
 
-                        <p id="login-text" class="Text-Style-5">Login</p>
+                        <p class="login-text Text-Style-5">Login</p>
                         <span class="Text-Style-2">Aby zaimportować dane zaloguj się do swojego banku</span>
 
-                        <form method="post" action="#" autocomplete="off">
+                        <form   method="post"
+                                action="index.html"
+                                autocomplete="off"
+                                id="login-form">
                             <fieldset>
-                                <div id="avatar-container"></div>
-                                <input type="text" name="login" id="login" autofocus maxlength="9" class="Text-Style-2" placeholder="Wprowadź login" title="Twój login powinien zawierać 9 cyfr.">
+                                <div class="avatar-container"></div>
+                                <input  type="text"
+                                        name="login"
+                                        class=" login
+                                                Text-Style-2" 
+                                        placeholder="Wprowadź login"
+                                        title="Twój login powinien zawierać 9 cyfr"
+                                        autofocus
+                                        maxlength="9"
+                                        data-state="display">
 
-                                <span id="chosen-login"></span>
-                                <div id="clear-login">
-                                    <span>
-                                        &#215;
-                                    </span>
+                                <span   class="chosen-login"
+                                        data-state="hide"></span>
+                                <div    class="clear-login"
+                                        data-state="hide">
+                                    <span>&#215;</span>
                                 </div>
-                                <span id="login-exclamation" class="login-info">Pole login może zawierać tylko cyfry</span>
+                                <span   class="login-exclamation login-info"
+                                        data-state="hide">Pole login może zawierać tylko cyfry</span>
                                 
-                                <input type="password" name="password" id="password" maxlength="20" class="Text-Style-2" placeholder="Wprowadź hasło">
+                                <input  type="password"
+                                        name="password" 
+                                        maxlength="20" 
+                                        class="password Text-Style-2"
+                                        placeholder="Wprowadź hasło"
+                                        data-state="hide">
                                     <br />
-                                <span id="reset">Select other</span>
-                                <input type="submit" id="submit" disabled value="Go">
+                                <span class="reset">Select other</span>
+                                <input  type="submit"
+                                        class="submit"
+                                        disabled value="Go">
                             </fieldset>
                         </form>
                     </div>
                     <!-- Links  -->
-                    <div id="login-links" class="Text-Style">
+                    <div class="login-links Text-Style">
                         <a href="#">Security</a>
                         <a href="#">Logging in</a>
                         <a href="#">Contact</a>
@@ -54,12 +75,12 @@
             </div>
         </div>
     </main>
-    <script src="js/app.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.2/qs.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/form_validation.js"></script>
+    <script src="js/api_requests.js"></script>
 </body>
 </html>
